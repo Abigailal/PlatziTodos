@@ -1,0 +1,7 @@
+import React from "react";
+
+function EmptySearchResults({ searchedText }) {
+    return <p className="alertMessage">No se encontró: {searchedText}</p>;
+}
+
+export { EmptySearchResults }

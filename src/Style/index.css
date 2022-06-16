@@ -1,0 +1,183 @@
+:root {
+  --color-violet: #7C3E66;
+  --color-beige: #F2EBE9;
+  --color-sky: #A5BECC;
+  --color-blue: #243A73;
+  --color-white: white;
+  --color-black: black;
+  --size-icons: 1.6em;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #243A73;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+header, main, footer {background-color: var(--color-blue);}
+main {height: 600px;}
+
+
+/*Header*/
+.profile-container {
+  background-color: var(--color-blue);
+  color: var(--color-sky);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.75);
+}
+.profile-img {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-sky);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+.TodoSearchButton, .Perfil-button{
+  border: none;
+  background-color: var(--color-blue);
+  height: 45px;
+  width: 45px;
+  font-size: var(--size-icons);
+  color: var(--color-sky);
+}
+.Perfil-button{z-index: 1;}
+#perfil{position: absolute;}
+.PerfilBackground {
+  background: rgba(32,35,41,.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*
+.get-avatar__upload-field {
+  display: none;
+}
+*/
+.get-avatar__preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+}
+
+.tasks-container{color: var(--color-sky);}
+
+/*ToDo Search*/
+.TodoSearch{
+  border: none;
+  background-color: var(--color-beige);
+  width: 100%;
+  height: 50px;
+  display: block;
+  border-radius: 10px;
+  color: var(--color-violet);
+}
+.TodoSearch:focus {
+  outline:none;
+  border: 2px solid var(--color-violet);
+}
+.TodoSearch--active{display: block;}
+
+/*Main*/
+/*List ToDo*/
+ul {list-style: none;}
+/*Items ToDo*/
+.TodoItem {
+  background-color: var(--color-beige);
+  position: relative;
+  color: var(--color-violet);
+  border-radius: 10px;
+  box-shadow: 10px 7px 10px 5px rgba(0,0,0,0.75);
+}
+.TodoItem-p {
+  width: calc(100% - 120px);
+  font-size: 18px;
+}
+.TodoItem-loading{
+  background-color: var(--color-beige);
+  position: relative;
+  color: var(--color-violet);
+  border-radius: 10px;
+  box-shadow: 10px 7px 10px 5px rgba(0,0,0,0.75);
+  height: 70px;
+}
+.TodoItem-p--complete {text-decoration: line-through;}
+.Icon {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+}
+.Icon-check {
+  position: absolute;
+  left: 12px;
+}
+.Icon-check--active {color: #4caf50;}
+.Icon-delete {
+  position: absolute;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+}
+.Icon-delete:hover {color: red;}
+.icon-empty, .icon-error {
+  font-size: 5em;
+  color: var(--color-beige);
+}
+.icon-loading{
+  font-size: 1.5em;
+}
+/*Footer*/
+/*Button create*/
+.CreateTodoButton {
+  background-color: var(--color-violet);
+  box-shadow: 0px 5px 25px var(--color-blue);
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  position: relative;
+  left: 45%;
+  height: 50px;
+  width: 50px;
+  color: var(--color-beige);
+  transform: rotate(0);
+  transition: .3s ease;
+  z-index: 1;
+}
+.CreateTodoButton:hover {transform: rotate(224deg);}
+/*MODAL*/
+#modal {
+  position: absolute;
+}
+.ModalBackground {
+  background: rgba(32,35,41,.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*TodoForm*/
+form {
+  background-color: var(--color-sky);
+  border-radius: 10%;
+}
+.formTarea {
+  height: 200px;
+  width: 300px;
+  background-color: var(--color-beige);
+}
