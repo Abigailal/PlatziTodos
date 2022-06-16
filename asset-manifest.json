@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PlatziTodos/static/css/main.581f9a64.css",
+    "main.js": "/PlatziTodos/static/js/main.60022a68.js",
+    "index.html": "/PlatziTodos/index.html",
+    "main.581f9a64.css.map": "/PlatziTodos/static/css/main.581f9a64.css.map",
+    "main.60022a68.js.map": "/PlatziTodos/static/js/main.60022a68.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.581f9a64.css",
+    "static/js/main.60022a68.js"
+  ]
+}
