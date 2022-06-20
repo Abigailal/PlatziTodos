@@ -1,23 +1,28 @@
 import React from "react";
+import { TodoContext } from '../TodoContext';
 
-function TodoForm({ addTodo, setOpenModal }) {
+function TodoForm() {
     const [ newTodoValue, setNewTodoValue ] = React.useState('');
+    const {
+        addTodo,
+        setOpenModal,
+      } = React.useContext(TodoContext);
 
     const onCancel = () => {
         setOpenModal(false); //Cierra el modal
     }
 
-    const onEnter=(event)=> {
+    
+    /*const onEnter=(event)=> {
         if(event.keyCode === 13) {
             onSubmit(event);
         } else if(event.keyCode === 27) {
             setOpenModal(false);
         }
-    }
+    }*/
 
     const onSubmit = (event) => {
         event.preventDefault();//Metodo que ayuda a no recargar la pagina al enviar el submit
-        if(newTodoValue.length <= 0)return; //Si no escribio nada
         addTodo(newTodoValue); //Manda el nuevo valor del task creado
         setOpenModal(false); //Cierra el modal
     }
@@ -33,7 +38,7 @@ function TodoForm({ addTodo, setOpenModal }) {
                 className="formTarea text-center"
                 value={newTodoValue}
                 onChange={onChange}
-                onKeyDown={onEnter}
+                //onKeyDown={onEnter}
                 placeholder="New Task..."
             />
             <div className="d-flex justify-content-center align-items-center">

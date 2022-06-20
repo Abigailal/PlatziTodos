@@ -11,7 +11,6 @@ import { EditButtonProfile } from '../Header/EditButtonProfile';
 import { Modal } from '../Footer/Modal';
 import {TodoForm} from '../Footer/TodoForm';
 import {Perfil} from '../Header/PerfilModal';
-import {NameProfile} from '../Header/NameProfile';
 import {PerfilForm} from '../Header/PerfilForm';
 import {Profile} from '../Header/Profile';
 import {TodoError} from '../Main/TodoError';
@@ -29,7 +28,6 @@ function AppUI (){
         deleteTodo,
         openModal,
         setOpenModal,
-        addTodo,
         openEdit,
         setOpenEdit,
         avatar,
@@ -90,7 +88,7 @@ function AppUI (){
                     <div className='row'>
                         <div className='col'>
                             <TodoList>
-                                {error && <TodoError error = {error}/>}
+                                {error && <TodoError/>}
                                 {loading && <TodoLoading/>}
                                 {(!loading && !searchedTodos.length) && <EmptyTodo/>}
                                 {searchedTodos.map(todo => (
@@ -113,15 +111,11 @@ function AppUI (){
                         <div className='col'>
                             {!!openModal && (
                                 <Modal>
-                                    <TodoForm
-                                        addTodo={addTodo}
-                                        setOpenModal={setOpenModal}
-                                    />
+                                    <TodoForm/>
                                 </Modal>
                             )}
                             <CreateTodoButton
                                 setOpenModal={setOpenModal}
-                                openModal={openModal}
                             />
                         </div>
                     </div>
