@@ -12,11 +12,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #243A73;
+  background-color: var(--color-blue);
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 header, main, footer {background-color: var(--color-blue);}
-main {height: 600px;}
+main {height: auto;}
 
 
 /*Header*/
@@ -70,8 +70,9 @@ main {height: 600px;}
   height: 80px;
 }
 
-.tasks-container{color: var(--color-sky);}
-
+.tasks-container{
+  color: var(--color-sky);
+}
 /*ToDo Search*/
 .TodoSearch{
   border: none;
@@ -82,6 +83,7 @@ main {height: 600px;}
   border-radius: 10px;
   color: var(--color-violet);
 }
+
 .TodoSearch:focus {
   outline:none;
   border: 2px solid var(--color-violet);
@@ -147,6 +149,7 @@ ul {list-style: none;}
   font-size: 40px;
   position: relative;
   left: 45%;
+  top: 40px;
   height: 50px;
   width: 50px;
   color: var(--color-beige);

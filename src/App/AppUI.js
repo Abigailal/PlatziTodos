@@ -86,7 +86,7 @@ function AppUI (){
                         </div>
                     </div>
                     <div className='row'>
-                        <div className='col'>
+                        <div className='col task-list'>
                             <TodoList>
                                 {error && <TodoError/>}
                                 {loading && <TodoLoading/>}
@@ -106,7 +106,7 @@ function AppUI (){
                 </div>
             </main>
             <footer className="pb-5">
-                <div className="container">
+                <div className="container text-center">
                     <div className='row'>
                         <div className='col'>
                             {!!openModal && (
